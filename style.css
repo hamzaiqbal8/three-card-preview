@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: "Popins", sans-serif;
+}
+
+:root {
+    --content-tab-background: #F6D050;
+    --content-tab-color: #000000;
+    --button-roundness: 0.5rem;
+}
+
+
+
+.popup-trigger__container {
+    margin: 2rem 2rem;
+}
+
+/* ------------------ Modal ------------------  */
+.popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s linear;
+}
+
+.popup-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-modal__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.button {
+    display: inline-block;
+    background-color: #3c8268;
+    color: white;
+    border-radius: var(--button-roundness, 0.5rem);
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+}
+
+.three-preview-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 850px;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.three-preview-card-wrapper {
+    display: flex;
+}
+
+.card {
+    color: white;
+    padding: 2.2rem;
+}
+
+.card-1 {
+    background-color: #E38525;
+}
+
+.car-types {
+    font-size: 1.6rem;
+}
+
+.car-type-info {
+    line-height: 1.6;
+}
+
+.card-2 {
+    background-color: #016871;
+}
+
+.card-3 {
+    background-color: #003F3E;
+}
+
+.btn-wrap {
+    padding-top: 2.2rem;
+}
+
+.button--show-modal {
+    border-radius: 3rem;
+}
+
+@media screen and (max-width:698px) {
+    .three-preview-card-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 120vh;
+        overflow-y: auto;
+
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        height: 350px;
+    }
+
+    .btn-wrap {
+        padding-top: -3rem;
+    }
+} 
