@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="popup-trigger__container">
+      <button class=" button--show-modal button">Show Modal</button>
+    </div>
+    <div class="popup-modal">
+      <div class="popup-modal__wrapper">
+        <div class="popup-modal__overlay"></div>
+        <div class="three-preview-card">
+          <div class="three-preview-card-wrapper">
+            <div class="card card-1">
+              <div class="card-wrapper">
+                <div class="card-image-wrapper">
+                  <img src="./images/icon-sedans.svg" alt="" />
+                </div>
+                <div class="car-types">
+                  <h2>SEDANS</h2>
+                </div>
+                <div class="car-type-info">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Illum molestias rem fugit odit voluptate veniam nulla unde
+                    perspiciatis!
+                  </p>
+                </div>
+                <div class="btn-wrap">
+                  <button
+                    class="button button--show-modal"
+                    style="color: #e38525; background: white"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card card-2">
+              <div class="card-wrapper">
+                <div class="card-image-wrapper">
+                  <img src="./images/icon-suvs.svg" alt="" />
+                </div>
+                <div class="car-types">
+                  <h2>SUV</h2>
+                </div>
+                <div class="car-type-info">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Illum molestias rem fugit odit voluptate veniam nulla unde
+                    perspiciatis!
+                  </p>
+                </div>
+                <div class="btn-wrap">
+                  <button
+                    class="button button--show-modal"
+                    style="color: #016871; background: white"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card card-3">
+              <div class="card-wrapper">
+                <div class="card-image-wrapper">
+                  <img src="./images/icon-luxury.svg" alt="" />
+                </div>
+                <div class="car-types">
+                  <h2>LUXURY</h2>
+                </div>
+                <div class="car-type-info">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Illum molestias rem fugit odit voluptate veniam nulla unde
+                    perspiciatis!
+                  </p>
+                </div>
+                <div class="btn-wrap">
+                  <button
+                    class="button button--show-modal"
+                    style="color: #003f3e; background: white"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+      let popupModalEl = document.querySelector(".popup-modal");
+      let popupOverlayEl = document.querySelector(".popup-modal__overlay");
+      let popupTriggerBtn = document.querySelector(".button--show-modal");
+
+      // let closeBtnPopup = document.querySelector("");
+
+      function showPopup() {
+        popupModalEl.classList.add("show");
+      }
+      function hidePopup() {
+        popupModalEl.classList.remove("show");
+      }
+
+      popupTriggerBtn.addEventListener("click", () => {
+        showPopup();
+      });
+      popupOverlayEl.addEventListener("click", () => {
+        hidePopup();
+      });
+
+      setTimeout(() => {
+        showPopup();
+      }, 3000);
+    </script>
+  </body>
+</html>
